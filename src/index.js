@@ -16,10 +16,6 @@ hbs.registerPartials(partialsPath);
 //built in middleware
 //app.use(express.static(staticPath));
 
-app.get("/about", (req, res) => {
-  res.render("about");
-});
-
 // template
 app.get("/", (req, res) => {
   res.render("index", {
@@ -27,12 +23,22 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.send("Hello from the other side");
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
-app.get("/about", (req, res) => {
-  res.send("Hello from About Page");
+// app.get("/", (req, res) => {
+//   res.send("Hello from the other side");
+// });
+
+// app.get("/about", (req, res) => {
+//   res.send("Hello from About Page");
+// });
+
+app.get("*", (req, res) => {
+  res.render("404", {
+    errorComp: "Page  could not be found. try again.",
+  });
 });
 
 app.listen(8000, () => {
