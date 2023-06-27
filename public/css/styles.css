@@ -1,0 +1,13 @@
+body{
+
+}
+.brand{
+    font-size: 2rem;
+    color:#3bd77a;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+.brand:hover{
+    color:#22fb01
+}
