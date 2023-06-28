@@ -11,3 +11,30 @@ body{
 .brand:hover{
     color:#22fb01
 }
+.main-title{
+    font-size: 3rem;
+}
+.main-title span{
+    color: #3bd77a;
+}
+.main-info{
+    float:right
+}
+.circle{
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 10px;
+    border-color: black;
+    float:right;
+    shape-outside: circle();
+}
+.img-dashboard{
+    width: 20rem;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(56, 175, 23));
+}
