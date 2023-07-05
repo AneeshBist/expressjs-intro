@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 
-//console.log(__dirname);
+//console.log(__dirname) ;
 const staticPath = path.join(__dirname, "../public");
 const templatePath = path.join(__dirname, "./templates/views");
 const partialsPath = path.join(__dirname, "./templates/partials");
