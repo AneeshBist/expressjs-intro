@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 
-//console.log(__dirname) ;
+//console.log(__ dirname) ;
 const staticPath = path.join(__dirname, "../public");
 const templatePath = path.join(__dirname, "./templates/views");
 const partialsPath = path.join(__dirname, "./templates/partials");
@@ -14,7 +14,7 @@ app.set("views", templatePath);
 hbs.registerPartials(partialsPath);
 
 //built in middleware
-//app.use(express.static(staticPath));
+app.use(express.static(staticPath));
 
 // template
 app.get("/", (req, res) => {
