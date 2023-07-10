@@ -40,7 +40,6 @@ min-height: 100vh;
     bottom: 0;position: absolute; */
     margin-top: auto;
     width: 100vw;
-    height: 3rem;
     text-align: center;
     background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(56, 175, 23));
 }

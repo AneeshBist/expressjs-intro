@@ -8,7 +8,7 @@ const staticPath = path.join(__dirname, "../public");
 const templatePath = path.join(__dirname, "./templates/views");
 const partialsPath = path.join(__dirname, "./templates/partials");
 
-//set view engine
+//set view  engine
 app.set("view engine", "hbs");
 app.set("views", templatePath);
 hbs.registerPartials(partialsPath);
@@ -24,7 +24,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about");
+  //console.log(req.query);
+  res.render("about", {
+    fname: req.query.fname,
+    lname: req.query.lname,
+  });
 });
 
 // app.get("/", (req, res) => {
